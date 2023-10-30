@@ -649,6 +649,9 @@ void ResponseAppendFeatures(void)
 #if defined(USE_I2C) && defined(USE_EZOFLO)
     feature7 |= 0x00000080;  // xsns_78_ezoflo.ino
 #endif
+#if defined(USE_LIGHT) && defined(USE_GOSUND_DIMMER)
+  feature7 |= 0x00000100;  // xdrv_84_gosund_dimmer.ino
+#endif
 #if defined(USE_I2C) && defined(USE_EZODO)
     feature7 |= 0x00000100;  // xsns_78_ezodo.ino
 #endif
